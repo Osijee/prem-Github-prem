@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Pas forcer</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>Success</h1>
+        <p>Le truc na rien fait mais success</p>
+        <a download="doc.txt" href=>Download</a>
+        <button onclick="downloadURI(///C:/Env%20Dev/, doc.txt)"></button>
+    </body>
+    <footer>
+        <p>OK</p>
+    </footer>
+    <script>
+        function downloadURI(uri, name)
+{
+        var link = document.createElement("a");
+        link.download = name ;
+        link.href = uri;
+        link.click();
+}
+    </script>
+</html>
