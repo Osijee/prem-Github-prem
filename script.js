@@ -47,14 +47,15 @@ arrayNumb.forEach((box) => {
 document.querySelector("#check").addEventListener("click", (e) => {
   e.preventDefault();
   let response = randomNumber(0, 10);
-  console.log(response);
-  let tolerance = 1;
+  let tolerance = 0;
   let choiceNb = parseInt(choice.innerHTML);
   if (
     choiceNb == response ||
     (choiceNb >= response - tolerance && choiceNb <= response + tolerance)
   ) {
     alert("Vous avez gagner !!");
+  } else {
+     alert("Vous avez perdue, le chifre etait " + response);
   }
 });
 
